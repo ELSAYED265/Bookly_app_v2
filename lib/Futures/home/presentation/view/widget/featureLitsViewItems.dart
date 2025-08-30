@@ -8,9 +8,11 @@ class FeatureListViewItems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 2 / 4,
+      aspectRatio: 2 / 3.2,
       child: Container(
         decoration: BoxDecoration(
+          color: Colors.red,
+          borderRadius: BorderRadius.circular(10),
           image: DecorationImage(
             image: AssetImage(AssetsData.testImage),
             fit: BoxFit.fill,
