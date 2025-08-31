@@ -12,7 +12,7 @@ class FeatureListViewItems extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           color: Colors.red,
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(15),
           image: DecorationImage(
             image: AssetImage(AssetsData.testImage),
             fit: BoxFit.fill,

@@ -1,8 +1,11 @@
 import 'package:booky_app/Futures/home/presentation/view/Home_view.dart';
-import 'package:booky_app/constant.dart';
+import 'package:booky_app/core/utils/appRoute.dart';
 import 'package:booky_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../../../../constant.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -23,14 +26,15 @@ class _SplashViewBodyState extends State<SplashViewBody>
     super.initState();
   }
 
-  void transtionToHome() {
+  void transtionToHome() async {
     Future.delayed(
       Duration(seconds: 2),
-      () => Get.to(
-        HomeView(),
-        transition: Transition.fade,
-        duration: kTransitionDuration,
-      ),
+      () => GoRouter.of(context).push(AppRouter.homeview),
+      // () => Get.to(
+      //   HomeView(),
+      //   transition: Transition.fade,
+      //   duration: kTransitionDuration,
+      // ),
     );
   }
 
