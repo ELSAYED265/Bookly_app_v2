@@ -1,29 +1,35 @@
+import 'package:booky_app/Futures/home/presentation/view/widget/CustomBookImage.dart';
+import 'package:booky_app/core/utils/style.dart';
+import 'package:booky_app/core/widget/customBottum.dart';
 import 'package:flutter/material.dart';
+
+import 'BookAction.dart';
+import 'BookDetailSection.dart';
+import 'CustomBookDetailsAppbar.dart';
+import 'RatingBook.dart';
+import 'SimilerBookSection.dart';
+import 'SimimerToBooksListView.dart';
 
 class BookDetailsBody extends StatelessWidget {
   const BookDetailsBody({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30),
-      child: Column(children: [CustomBookDetailsAppbar()]),
-    );
-  }
-}
-
-class CustomBookDetailsAppbar extends StatelessWidget {
-  const CustomBookDetailsAppbar({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        IconButton(onPressed: () {}, icon: Icon(Icons.close)),
-        IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.shopping_cart_checkout_outlined),
+    return CustomScrollView(
+      slivers: [
+        SliverFillRemaining(
+          hasScrollBody: false,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30),
+            child: Column(
+              children: [
+                CustomBookDetailsAppbar(),
+                BookDetailSection(),
+                Expanded(child: const SizedBox(height: 50)),
+                SimilerBookSection(),
+                const SizedBox(height: 14),
+              ],
+            ),
+          ),
         ),
       ],
     );

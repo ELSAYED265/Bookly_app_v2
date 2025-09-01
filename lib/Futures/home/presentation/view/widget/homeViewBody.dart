@@ -8,7 +8,7 @@ import 'BestSellerListView.dart';
 import 'BestSellerListViewItem.dart';
 import 'customAppBar.dart';
 import 'featureBookListView.dart';
-import 'featureLitsViewItems.dart';
+import 'CustomBookImage.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -22,17 +22,25 @@ class HomeViewBody extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 5),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: CustomAppBar(),
               ),
               FeatureBookListView(),
               SizedBox(height: 40),
-              Text("Best Seller", style: Style.textStyle18),
+              Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Text("Best Seller", style: Style.textStyle18),
+              ),
               SizedBox(height: 20),
             ],
           ),
         ),
-        SliverFillRemaining(child: BestSellerListView()),
+        SliverFillRemaining(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: BestSellerListView(),
+          ),
+        ),
       ],
     );
     return Padding(
