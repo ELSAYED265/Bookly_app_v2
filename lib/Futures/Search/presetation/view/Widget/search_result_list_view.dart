@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'BestSellerListViewItem.dart';
+import '../../../../home/presentation/view/widget/BestSellerListViewItem.dart';
 
-class BestSellerListView extends StatelessWidget {
-  const BestSellerListView({super.key});
+class SearchResultListView extends StatelessWidget {
+  const SearchResultListView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      physics: NeverScrollableScrollPhysics(),
       padding: EdgeInsets.zero,
       itemCount: 10,
       itemBuilder: (context, i) {
