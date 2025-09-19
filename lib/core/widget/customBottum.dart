@@ -12,6 +12,7 @@ class Custombuttom extends StatelessWidget {
     this.TopRight,
     required this.text,
     this.fontsize,
+    this.onPressed,
   });
   final Color textColor;
   final Color BackGroungColor;
@@ -21,6 +22,7 @@ class Custombuttom extends StatelessWidget {
   final Radius? TopRight;
   final String text;
   final double? fontsize;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -37,7 +39,7 @@ class Custombuttom extends StatelessWidget {
             ),
           ),
         ),
-        onPressed: () {},
+        onPressed: onPressed,
         child: Text(
           text,
           style: Style.textStyle18.copyWith(

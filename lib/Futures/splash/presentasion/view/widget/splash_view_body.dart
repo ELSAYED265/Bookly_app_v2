@@ -29,7 +29,10 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void transtionToHome() async {
     Future.delayed(
       Duration(seconds: 2),
-      () => GoRouter.of(context).push(AppRouter.homeview),
+      () {
+        if (!mounted) return;
+        GoRouter.of(context).push(AppRouter.homeview);
+      },
       // () => Get.to(
       //   HomeView(),
       //   transition: Transition.fade,

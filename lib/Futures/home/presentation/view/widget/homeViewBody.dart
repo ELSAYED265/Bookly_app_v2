@@ -16,6 +16,7 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
+      physics: BouncingScrollPhysics(),
       slivers: [
         SliverToBoxAdapter(
           child: Column(
@@ -43,20 +44,20 @@ class HomeViewBody extends StatelessWidget {
         ),
       ],
     );
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          CustomAppBar(),
-          FeatureBookListView(),
-          SizedBox(height: 40),
-          Text("Best Seller", style: Style.textStyle18),
-          SizedBox(height: 20),
-          BestSellerListView(),
-        ],
-      ),
-    );
+    // return Padding(
+    //   padding: const EdgeInsets.symmetric(horizontal: 20),
+    //   child: Column(
+    //     crossAxisAlignment: CrossAxisAlignment.start,
+    //     children: [
+    //       CustomAppBar(),
+    //       FeatureBookListView(),
+    //       SizedBox(height: 40),
+    //       Text("Best Seller", style: Style.textStyle18),
+    //       SizedBox(height: 20),
+    //       BestSellerListView(),
+    //     ],
+    //   ),
+    // );
   }
 }
 

@@ -1,7 +1,8 @@
 import 'package:bloc/bloc.dart';
-import 'package:booky_app/Futures/home/Data/model/book_model/book_model.dart';
 import 'package:booky_app/Futures/home/Data/repos/home.repo.dart';
 import 'package:meta/meta.dart';
+
+import '../../../Data/model/Book_Model/book_model.dart';
 
 part 'feature_book_state.dart';
 
